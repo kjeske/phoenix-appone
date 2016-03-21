@@ -3,6 +3,8 @@
 /db
 /deps
 /*.ez
+rel/*
+!rel/relx.config
 
 # Generate on crash by the VM
 erl_crash.dump
