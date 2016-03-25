@@ -32,7 +32,7 @@ defmodule Appone.ReleaseTasks do
   end
 
   defp start_repo do
-    start_applications([:logger, :sbroker, :postgrex, :ecto])
+    start_applications([:logger, :postgrex, :ecto])
     :ok = Application.load(:appone)
     {:ok, _} = Appone.Repo.start_link()
   end
