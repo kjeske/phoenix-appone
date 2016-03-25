@@ -13,8 +13,9 @@ config :appone, Appone.Endpoint,
 
 # Configure your database
 config :appone, Appone.Repo,
+  hostname: "db",
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
+  username: System.get_env("DB_USER")
+  password: System.get_env("DB_PASSWORD"),
   database: "appone_prod",
   pool_size: 20 
