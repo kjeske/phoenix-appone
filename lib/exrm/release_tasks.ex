@@ -16,7 +16,7 @@ defmodule Appone.ReleaseTasks do
 
   def migrate do
     start_repo()
-    migrations_path = Application.app_dir(:appone, "priv/migrations")
+    migrations_path = Application.app_dir(:appone, "priv/repo/migrations")
     Ecto.Migrator.run(Appone.Repo, migrations_path, :up, all: true)
   end
 
